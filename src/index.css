@@ -57,6 +57,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.3s ease;
 }
 html,body {
     width: 100vw;
@@ -75,6 +76,23 @@ h1 {
     justify-content: space-between;
 }
 
+/* NAVEGAÇÃO */
+#navbar {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 50vw;
+    height: 3vh;
+    padding: 1.5%;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #c0c0c0;
+    box-shadow: 1px 1px 5px #0000008f;
+    border-radius: 100px;
+    transition: all 1s ease;
+    z-index: 1;
+}
 /* HOME */
 
 #home_box_one {
@@ -132,17 +150,24 @@ h1 {
 }
 #botao_home {
     position: absolute;
-    width: 30vw;
+    width: 35vw;
     top: 90;
     left: 0;
     padding: 3%;
     margin-top: 10%;
-    background: linear-gradient(70Deg, #5C5BFF, #373799);
+    background: linear-gradient(70Deg, #373799, #5C5BFF);
     font-size: 3.5vh;
+    font-family: "Inter";
     color: whitesmoke;
     text-align: center;
     border-radius: 0 40px 40px 0;
     box-shadow: 1px 2px 5px #0000009f;
+    transition: all 3s ease;
+}
+#botao_home:hover {
+    padding: 4%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 #home_box_two {
     width: 50%;
@@ -150,4 +175,35 @@ h1 {
     margin: auto;
     display: flexbox;
     float: right;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.circle_home {
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    border-radius: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#circle_home1 {
+    background-color: #5BACFF;
+    transform: translate(-50%, -50%) scale(1.13);
+    z-index: 1;
+}
+#circle_home2 {
+    background-image: url("../images/personagem.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
+}
+#circle_home3 {
+    border: 1.5px solid #000;
+    transform: translate(-50%, -50%) scale(1.28);
+    z-index: 3;
 }
