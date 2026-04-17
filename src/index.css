@@ -1,0 +1,153 @@
+
+/* ANIMAÇÃO */
+.wave span {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+  
+    10% {
+      transform: translateY(-10px); /* sobe */
+    }
+  
+    20% {
+      transform: translateY(0); /* desce */
+    }
+  
+    100% {
+      transform: translateY(0); /* 🔥 fica parado o resto do tempo */
+    }
+  }
+
+/* FONTES */
+.geo-regular {
+    font-family: "Geo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .geo-regular-italic {
+    font-family: "Geo", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.geologica {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0,
+      "SHRP" 0;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* CONFI. GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+h1 {
+    font-size: 9vh;
+    font-family: "Geologica";
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HOME */
+
+#home_box_one {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    float: left;
+}
+#texto01home {
+    font-size: 1.5em;
+    font-family: "Geo";
+    position: relative;
+    margin-left: 3.5vw;
+}
+#texto02home {
+    width: 70%;
+    margin-top: 3%;
+    font-family: "Inter";
+    position: relative;
+    margin-left: 3.5vw;
+}
+.titulo {
+    margin: 0;
+    margin-left: 3.5vw;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+#titulo01::before {
+    content: attr(data-text);
+    width: 100%;
+    height: 35%; 
+    padding: 0 5% 0 5%;
+    position: absolute;
+    top: 55%;
+    left: -5%;
+    background-color: #c0c0c0;
+    border-radius: 20px;
+    z-index: -1;
+}
+#titulo02::before {
+    content: attr(data-text);
+    width: 100%;
+    height: 35%; 
+    padding: 0 3% 0 3%;
+    position: absolute;
+    top: 55%;
+    left: -3%;
+    background-color: #5BACFF;
+    border-radius: 20px;
+    z-index: -1;
+}
+#botao_home {
+    position: absolute;
+    width: 30vw;
+    top: 90;
+    left: 0;
+    padding: 3%;
+    margin-top: 10%;
+    background: linear-gradient(70Deg, #5C5BFF, #373799);
+    font-size: 3.5vh;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 0 40px 40px 0;
+    box-shadow: 1px 2px 5px #0000009f;
+}
+#home_box_two {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flexbox;
+    float: right;
+}
