@@ -75,6 +75,17 @@ h1 {
     align-items: center;
     justify-content: space-between;
 }
+ul {
+    width: 85%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+ul, li {
+    display: flex;
+    list-style: none;
+    color: #5C5BFF;
+}
 
 /* NAVEGAÇÃO */
 #navbar {
@@ -87,11 +98,14 @@ h1 {
     top: 3%;
     left: 50%;
     transform: translate(-50%);
-    background-color: #c0c0c0;
+    background-color: #dbdbdb;
     box-shadow: 1px 1px 5px #0000008f;
     border-radius: 100px;
     transition: all 1s ease;
     z-index: 1;
+}
+.icon {
+    font-size: 4.3vmin !important;
 }
 /* HOME */
 
@@ -178,6 +192,7 @@ h1 {
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: all 0.5s ease;
 }
 .circle_home {
     display: block;
@@ -206,4 +221,7 @@ h1 {
     border: 1.5px solid #000;
     transform: translate(-50%, -50%) scale(1.28);
     z-index: 3;
+}
+#circle_home3:hover {
+    transform: translate(-50%, -50%) scale(1.13);
 }
