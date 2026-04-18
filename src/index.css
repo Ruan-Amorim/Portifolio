@@ -58,6 +58,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: 0.3s ease;
+    user-select: none;
 }
 html,body {
     width: 100vw;
@@ -77,7 +78,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(223, 223, 223, 0.93);
+    background-color: rgba(223, 223, 223, 0.95);
+    overflow-x: hidden;
 }
 ul {
     width: 85%;
@@ -208,8 +210,8 @@ ul, li {
 }
 .circle_home {
     display: block;
-    width: 25vw;
-    height: 25vw;
+    width: 23vw;
+    height: 23vw;
     position: absolute;
     border-radius: 60%;
     top: 50%;
