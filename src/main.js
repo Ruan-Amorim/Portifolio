@@ -11,6 +11,9 @@ const database = [{
         "minecraft": "url",
         "greninja": "url",
     },
+    'sound': {
+      "pig": ["../sounds/Pig_idle1.ogg","../sounds/Pig_idle2.oga","../sounds/Pig_death.oga"],
+    }
 }];
 
 /* HOUVER DA IMAGEM NA HOME */
@@ -51,5 +54,65 @@ window.onload = () => {
     .map(envolverTexto)
     .join("");
 };
+
+/* ELEMENTO VISIVEL */
+
+
+/* SCROLL */
+
+const scrollSmoth = (idLugar) => {
+  const lugar = document.getElementById(idLugar)
+
+  const inicio = window.scrollY;
+  const fim = lugar.offsetTop;
+  const duracao = 600;
+  
+  let start = null;
+  
+  function animar(tempo) {
+    if (!start) start = tempo;
+  
+    const progresso = Math.min((tempo - start) / duracao, 1);
+    const ease = 1 - Math.pow(1 - progresso, 3);
+  
+    window.scrollTo(0, inicio + (fim - inicio) * ease);
+  
+    if (progresso < 1) {
+      requestAnimationFrame(animar);
+    }
+  }
+  
+  requestAnimationFrame(animar);
+
+}
+/* FUNÇÃO DE DANO */
+
+var hit = 0;
+function damage(persona) {
+  const steve_damage = new Audio("../sounds/classic_hurt.mp3");
+  const image = document.getElementById("image_about");
+  image.classList.toggle("damage");
+
+  setTimeout(() => {
+    image.classList.remove("damage")
+  }, 200);
+  switch (persona) {
+    case 'pig':  
+    const pig_hurt = new Audio(database[0].sound.pig[hit]);
+    pig_hurt.play();
+    if (hit == 2) {
+      hit = 0;
+    } else {
+      hit = hit + 1;
+    }
+      break;
+    case 'steve':
+      steve_damage.play();
+      break;
+
+    default:
+      break;
+  }
+}
 
 personaHover();

@@ -22,7 +22,28 @@
       transform: translateY(0); /* 🔥 fica parado o resto do tempo */
     }
   }
-
+  @keyframes damage {
+    0% {
+        transform: translate(-43%,-51%) scale(1);
+    }
+    50% {
+        transform: translate(-43%,-51%) scale(1.1);
+    }
+    100% {
+        transform: translate(-43%,-51%) scale(1);
+    }
+  }
+  @keyframes hitFlash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
 /* FONTES */
 .geo-regular {
     font-family: "Geo", sans-serif;
@@ -59,6 +80,9 @@
     box-sizing: border-box;
     transition: 0.3s ease;
     user-select: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -66,14 +90,26 @@
 html,body {
     width: 100vw;
     height: 100vh;
+    scroll-behavior: smooth;
+}
+#background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     background-image: url("../images/akaza.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    z-index: -1;
 }
 h1 {
-    font-size: 12vmin;
+    font-size: 11vmin;
     font-family: "Geologica";
+}
+h2 {
+    font-size: 1.6em;
+    font-family: "Geologica";
+    text-transform: uppercase;
+}
+p {
+    font-family: "Inter";
 }
 .container {
     width: 100vw;
@@ -82,7 +118,6 @@ h1 {
     align-items: center;
     justify-content: space-between;
     background-color: rgba(223, 223, 223, 0.95);
-    overflow-x: hidden;
 }
 ul {
     width: 85%;
@@ -93,13 +128,12 @@ ul {
 ul, li {
     display: flex;
     list-style: none;
-    color: #5C5BFF;
 }
 
 /* NAVEGAÇÃO */
 #navbar {
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: center;
     width: 50vw;
     height: 3vh;
@@ -111,21 +145,23 @@ ul, li {
     box-shadow: 1px 1px 5px #0000008f;
     border-radius: 100px;
     transition: all 1s ease;
-    z-index: 1;
+    z-index: 1000;
 }
 .icon {
     font-size: 4.3vmin !important;
     cursor: pointer;
     position: relative;
     display: inline-block;
+    color: #5C5BFF;
+
 }
 
 .icon:hover {
     transform: scale(1.1);
     color: #0a0a8b;
 }
-/* HOME */
 
+/* HOME */
 #home_box_one {
     width: 50%;
     height: 100%;
@@ -241,4 +277,125 @@ ul, li {
 }
 #circle_home3:hover {
     transform: translate(-50%, -50%) scale(1.13);
+}
+
+/* ABOUT */
+#container-about {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(223, 223, 223, 0.95);
+}
+#about-box-one{
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#about-box-one > div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#about-box-one > div > p {
+    margin: 5% 10% 0 10%;
+    font-size: 3vmin;
+    text-align: justify;
+}
+#about-box-one > div > h2 {
+    position: relative;
+    display: inline-block;
+    transform: scale(1.1);
+    color: #5C5BFF;
+    z-index: 1;
+}
+#about-box-one > div > h2::after {
+    content: attr(data-text);
+    width: 100%;
+    height: 40%; 
+    padding: 0 5% 0 5%;
+    position: absolute;
+    top: 55%;
+    left: -5%;
+    background-color: #c0c0c0;
+    border-radius: 20px;
+    z-index: -1;
+}
+#about-box-two {
+    position: relative;
+    width: 40%;
+    height: 90%;
+    background: linear-gradient(110Deg, #5BACFF, #5697DA, #3e6e9e);
+    border-radius: 3% 0 0 3%;
+    box-shadow: -2px 0 5px #0000004f ;
+}
+#image_about {
+    position: absolute;
+    width: 49vmin;
+    height: 49vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%,-51%);
+    background-image: url("../images/minecraft.png");
+    cursor: pointer;
+    z-index: 4;
+}
+#image_about.damage {
+    animation: damage 0.2s ease;
+}
+#image_about::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: red;
+    pointer-events: none;
+
+}
+#image_about.damage::after {
+    animation: hitFlash 0.2s ease;
+}
+#steve {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+#pig {
+    position: absolute;
+    width: 52%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
+}
+.circle_about {
+    position: absolute;
+    width: 49vmin;
+    height: 49vmin;
+    border-radius: 60%;
+    background: linear-gradient(120Deg, #5C5BFF, #4A49CC, #4040B2, #3C3BA6, #3A399F, #373799);
+    box-shadow: 0 0 5px #0000004f;
+}
+#circle_about1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+#circle_about2 {
+    top: 50%;
+    left: 60%;
+    transform: translate(0,-96.5%);
+    z-index: 2;
+}
+#circle_about3 {
+    top: 50%;
+    left: 60%;
+    transform: translate(0,-3.5%);
+    z-index: 1;
 }

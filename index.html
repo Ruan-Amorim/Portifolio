@@ -12,31 +12,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     
 </head>
-<body>
+<body id="tela">
+    <div id="background"></div>
     <section id="container_home" class="container">
         <nav id="navbar">
             <ul>
-                <li id="icon1" class="icon_navbar">
+                <li id="icon1" class="icon_navbar" onclick="scrollSmoth('container_home')">
                     <span class="material-symbols-outlined icon">
                     castle
                     </span>
                 </li>
-                <li id="icon2" class="icon_navbar">
+                <li id="icon2" class="icon_navbar" onclick="scrollSmoth('container-about')">
                     <span class="material-symbols-outlined icon">
                         face_6
                         </span>
                 </li>
-                <li class="icon_navbar">
+                <li id="icon3"  class="icon_navbar">
                     <span class="material-symbols-outlined icon">
                         license
                         </span>
                 </li>
-                <li class="icon_navbar">
+                <li id="icon4"  class="icon_navbar">
                     <span class="material-symbols-outlined icon">
                         assignment
                         </span>
                 </li>
-                <li>
+                <li id="icon5" >
                     <span class="material-symbols-outlined icon">
                         neurology
                         </span>
@@ -54,7 +55,7 @@
                 <h1 id="titulo01" class="titulo"><span style="color: #5C5BFF;">Front</span>End</h1>
                 <h1 id="titulo02" class="titulo">Desenvolvedor</h1>
                 <p id="texto02home">Meu nome é Ruan Amorim, desenvolvedor web e entusiasta da ciência. Explore o site para conhecer meus projetos, habilidades e experiências.</p>
-                <div id="botao_home">AVANÇAR</div>
+                <div id="botao_home" onclick="scrollSmoth('container-about')">AVANÇAR</div> 
             </div>
         </div>
         <div id="home_box_two">
@@ -62,6 +63,24 @@
                 <div id="circle_home1" class="circle_home"></div>
                 <div id="circle_home2" class="circle_home"></div>
                 <div id="circle_home3" class="circle_home"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="container-about" class="container">
+        <div id="about-box-one">
+            <div>
+                <h2>SOBRE MIM</h2>
+                <p>Meu nome é Ruan Amorim de Mendonça. Sou desenvolvedor e designer web, com foco em front-end e criação de interfaces modernas e funcionais.<br> Sempre fui apaixonado por ciência e, ao longo dos anos, desenvolvi meus conhecimentos de forma autodidata. Atualmente, busco me especializar em uma área científica mais aprofundada, como física ou geofísica, onde possa integrar minha base em progamação para resolver problemas complexos e desenvolver soluções inovadoras.</p>
+            </div>
+        </div>
+        <div id="about-box-two">
+            <div id="circle_about1" class="circle_about"></div>
+            <div id="circle_about2" class="circle_about"></div>
+            <div id="circle_about3" class="circle_about"></div>
+            <div id="image_about" >
+                <div id="pig" onclick="damage('pig')"></div>
+                <div id="steve" onclick="damage('steve')"></div>
             </div>
         </div>
     </section>
