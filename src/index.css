@@ -60,6 +60,9 @@
     transition: 0.3s ease;
     user-select: none;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 html,body {
     width: 100vw;
     height: 100vh;
