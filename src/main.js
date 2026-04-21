@@ -61,11 +61,27 @@ window.onload = () => {
 /* ELEMENTO VISIVEL */
 window.addEventListener("scroll", () => {
   const vetorAtual = window.scrollY;
-  const alturaTela = screen.height;
+  const alturaTela = screen.height * 0.80;
+  const navbar = document.getElementById("navbar");
+
   if (vetorAtual < alturaTela * 0.80) {
     iconUpdate(1);
-  } else if (vetorAtual >= alturaTela * 0.80) {
+    navbar.style.width = "45%";
+    navbar.style.left = "50%";
+    navbar.style.transform = "translate(-50%)";
+    navbar.style.backgroundColor = "rgba(236, 236, 236, 0.19)";
+  } else if (vetorAtual >= alturaTela * 2) {
+    iconUpdate(3);
+    navbar.style.width = "28%";
+    navbar.style.left = "1%";
+    navbar.style.transform = "translate(0)";
+    navbar.style.backgroundColor = "whitesmoke";
+  } else if (vetorAtual >= alturaTela) {
     iconUpdate(2);
+    navbar.style.width = "45%";
+    navbar.style.left = "50%";
+    navbar.style.transform = "translate(-50%)";
+    navbar.style.backgroundColor = "rgba(236, 236, 236, 0.19)";
   } else {
     
   }
