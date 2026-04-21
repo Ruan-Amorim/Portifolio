@@ -9,7 +9,7 @@ const database = [{
         "personagem2": "./images/personagem-pixel-art.png",
         "eu_ghibli": "url",
         "minecraft": "url",
-        "greninja": "url",
+        "greninja": "url"
     },
     'sound': {
       "pig": ["../sounds/Pig_idle1.ogg","../sounds/Pig_idle2.oga","../sounds/Pig_death.oga"],
@@ -29,13 +29,13 @@ const personaHover = () => {
   })
   circle_persona.addEventListener("mouseleave", () => {
   
-    personagem.style.backgroundImage = `url(.${database[0].imagens.personagem1})`;
+    personagem.style.backgroundImage = `url(.${database[0].imagens.personagem})`;
     mensagem.style.opacity = 0;
   })
 }
 
 
-/* ANIMAÇÃO DAS LETRAS NA HOME */
+/* ANIMAÇÃO DAS LETRAS NA HOME  mkjkjk*/
 window.onload = () => {
   const elemento = document.getElementById("texto01home");
   
