@@ -44,6 +44,17 @@
         opacity: 0;
     }
   }
+  @keyframes flutuar {
+    0% {
+        transform: translateY(0) ;
+    }
+    50% {
+        transform: translateY(-1.5%) ;
+    }
+    0% {
+        transform: translateY(0) ;
+    }
+  }
 /* FONTES */
 .geo-regular {
     font-family: "Geo", sans-serif;
@@ -473,7 +484,7 @@ ul, li {
 #container_lista_certificados {
     position: relative;
     width: 100%;
-    height: 88%;
+    height: 98%;
     top: 50%;
     transform: translateY(-50%);
     overflow-x: hidden;
@@ -490,9 +501,9 @@ ul, li {
     position: relative;
     width: 30vmin;
     height: 40vmin;
-    margin: 1.1% 3% 0 3%;
+    margin: auto 3% auto 3%;
     border-radius: 5%;
-    
+    animation: flutuar 4s ease infinite;
 }
 .pasta::before {
     content: "";
@@ -556,4 +567,23 @@ ul, li {
     margin: auto;
     border-radius: 20px;
     box-shadow: 1px 1px 5px #00000054;
+    animation: flutuar 2s ease infinite;
+}
+.botao_certificado::after {
+    content: "VER";
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Geologica";
+    justify-content: center;
+    align-items: center;
+}
+.botao_certificado:hover {
+    scale: 1.1;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
