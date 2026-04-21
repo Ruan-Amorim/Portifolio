@@ -13,7 +13,51 @@ const database = [{
     },
     'sound': {
       "pig": ["../sounds/Pig_idle1.ogg","../sounds/Pig_idle2.oga","../sounds/Pig_death.oga"],
-    }
+    },
+    'certificados': [
+      {
+        'empresa': "Curso em Vídeo",
+        'nome': "Hardawe",
+        'hora': "20h",
+        'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Hardware-20-Horas-Certificado-Curso-em-Video-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+      },
+      {
+        'empresa': "Curso em Vídeo",
+        'nome': "Bases Numéricas",
+        'hora': "20h",
+        'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Bases-Numericas-20-Horas-Certificado-Curso-em-Video-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+      },
+      {
+        'empresa': "Curso em Vídeo",
+        'nome': "Algoritimos e logíca de progamação",
+        'hora': "40h",
+        'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Algoritmos-e-Logica-de-Programacao-40-Horas-Certificado-Curso-em-Video-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+      },
+      {
+        'empresa': "Curso em Vídeo",
+        'nome': "Javascript",
+        'hora': "40h",
+        'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Javascript-40-Horas-Certificado-Curso-em-Video-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+      },
+      {
+        'empresa': "Curso em Vídeo",
+        'nome': "Wordpress",
+        'hora': "40h",
+        'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-WordPress-Modulo-1-8211-Criando-um-site-do-zero-40-Horas-Certificado-Curso-e-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+      },
+      {
+        'empresa': "Curso em Vídeo",
+        'nome': "HTML5 e CSS3",
+        'hora': "40h",
+        'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Curso-HTML5-e-CSS3-modulo-3-de-5-40-HORAS-Certificado-Curso-em-Video-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+      },
+    ],
 }];
 
 /* HOUVER DA IMAGEM NA HOME */
@@ -153,4 +197,76 @@ function damage(persona) {
   }
 }
 
+/* LOADING CERTIFICADOS */
+
+var counterTypePast = 0;
+const typePast = ["pasta", "green_pasta", "orange_pasta"];
+
+const loadingCertificado = () => {
+  let container_lista_certificados = document.getElementById("container_lista_certificados");
+  let div = document.createElement("div");
+
+
+  for (let x = 0; x < database[0].certificados.length; x++) {
+    let pasta = document.createElement("div");
+    let pasta_parte_one = document.createElement("div");
+    let pasta_parte_two = document.createElement("div");
+    let pasta_parte_tree = document.createElement("div");
+
+    let logo_empresa = document.createElement("img");
+    let nome_empresa = document.createElement("p");
+
+    let image_pdf = document.createElement("img");
+    let container_info_certidicado = document.createElement("div");
+    let titulo_curso = document.createElement("h3");
+    let carga_horaria = document.createElement("p");
+
+    let botao_certificado = document.createElement("div");
+    
+    pasta.className = `pasta ${CounterTypePast(database[0].certificados[x].empresa)}`;
+    pasta_parte_one.className = "pasta_parte_one";
+    pasta_parte_two.className = "pasta_parte_two";
+    pasta_parte_tree.className = "pasta_parte_tree";
+    // parte one
+    logo_empresa.src = database[0].certificados[x].logo;
+    logo_empresa.alt = `logo da empresa ${database[0].certificados[x].empresa}`;
+    nome_empresa.innerText = database[0].certificados[x].empresa;
+    // parte two
+    image_pdf.className = "image_pdf";
+    image_pdf.src = database[0].certificados[x].imagem_pdf;
+    container_info_certidicado.className = "container_info_certidicado";
+    titulo_curso.className = "titulo_curso";
+    titulo_curso.innerText = database[0].certificados[x].nome;
+    carga_horaria.className = "carga_horaria";
+    carga_horaria.innerText = `Carga Horária: ${database[0].certificados[x].hora}`;
+
+    //parte três
+    botao_certificado.className = "botao_certificado";
+    // Adicionando aos containers
+    pasta_parte_one.append(logo_empresa, nome_empresa);
+
+    container_info_certidicado.append(titulo_curso,carga_horaria);
+    pasta_parte_two.append(image_pdf, container_info_certidicado);
+
+    pasta_parte_tree.append(botao_certificado);
+    pasta.append(pasta_parte_one, pasta_parte_two, pasta_parte_tree)
+    div.appendChild(pasta);
+  }
+  container_lista_certificados.appendChild(div);
+}
+// Essa função conta os tipos de pastas mudando o padrão de cores de forma linear
+const CounterTypePast = (empresa) => {
+  if (empresa == "Curso em Vídeo") {
+    counterTypePast = counterTypePast + 1;
+    return typePast[0];
+  } else if (empresa == "Fundação Padrescp") {
+    counterTypePast = counterTypePast + 1;
+    return typePast[2];
+  } else {
+    counterTypePast = 0;
+    return typePast[1];
+  }
+}
+
 personaHover();
+loadingCertificado();

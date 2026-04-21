@@ -96,6 +96,7 @@
     background-repeat: no-repeat;
     border: none;
     box-shadow: none;
+    outline: none;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -503,7 +504,10 @@ ul, li {
     height: 40vmin;
     margin: auto 3% auto 3%;
     border-radius: 5%;
-    animation: flutuar 4s ease infinite;
+}
+.pasta:hover {
+    transform: translateY(-10%);
+    transition: all 0.3s ease;
 }
 .pasta::before {
     content: "";
@@ -513,6 +517,26 @@ ul, li {
     bottom: -3.5%;
     left: 0;
     background-color: #56b0f0;
+    border-radius: 50px;
+}
+.orange_pasta::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: -3.5%;
+    left: 0;
+    background-color: rgb(255, 153, 0);
+    border-radius: 50px;
+}
+.green_pasta::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: -3.5%;
+    left: 0;
+    background-color: #5BFFAE;
     border-radius: 50px;
 }
 .pasta_parte_one {
@@ -586,4 +610,31 @@ ul, li {
     scale: 1.1;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.image_pdf {
+    display: block;
+    width: 90%;
+    height: 45%;
+    margin: 15% auto;
+    border-radius: 10%;
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.274);
+}
+.titulo_curso {
+    width: 100%;
+    margin: auto 5%;
+    text-align: left;
+    font-family: "Inter";
+    color: whitesmoke;
+}
+.carga_horaria{
+    width: 100%;
+    margin: auto 5%;
+    text-align: left;
+    font-family: "Inter";
+    color: whitesmoke;
+}
+.container_info_certidicado {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
 }
