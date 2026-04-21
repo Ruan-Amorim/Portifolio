@@ -24,12 +24,12 @@ const personaHover = () => {
 
   circle_persona.addEventListener("mouseenter", () => {
   
-    personagem.style.backgroundImage = "url(."+ database[0].imagens.personagem2+")";
+    personagem.style.backgroundImage = `url(.${database[0].imagens.personagem2})`;
     mensagem.style.opacity = 1;
   })
   circle_persona.addEventListener("mouseleave", () => {
   
-    personagem.style.backgroundImage = "url(."+ database[0].imagens.personagem+")";
+    personagem.style.backgroundImage = `url(.${database[0].imagens.personagem1})`;
     mensagem.style.opacity = 0;
   })
 }
