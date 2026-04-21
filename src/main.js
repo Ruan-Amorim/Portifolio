@@ -19,15 +19,18 @@ const database = [{
 /* HOUVER DA IMAGEM NA HOME */
 const personaHover = () => {
   let personagem = document.getElementById("circle_home2");
+  let mensagem = document.getElementById("hello_image");
   let circle_persona = document.getElementById("circle_home3");
 
   circle_persona.addEventListener("mouseenter", () => {
   
     personagem.style.backgroundImage = "url(."+ database[0].imagens.personagem2+")";
+    mensagem.style.opacity = 1;
   })
   circle_persona.addEventListener("mouseleave", () => {
   
     personagem.style.backgroundImage = "url(."+ database[0].imagens.personagem+")";
+    mensagem.style.opacity = 0;
   })
 }
 
@@ -56,8 +59,27 @@ window.onload = () => {
 };
 
 /* ELEMENTO VISIVEL */
+window.addEventListener("scroll", () => {
+  const vetorAtual = window.scrollY;
+  const alturaTela = screen.height;
+  if (vetorAtual < alturaTela * 0.80) {
+    iconUpdate(1);
+  } else if (vetorAtual >= alturaTela * 0.80) {
+    iconUpdate(2);
+  } else {
+    
+  }
+});
 
-
+function iconUpdate(icon) {
+  for (let x = 0; x < 6; x++) {
+    let number = x + 1;
+    let icone = document.getElementById(`icon${String(number)}`);
+    icone.style.color = "#5C5BFF"
+  }
+  let icone = document.getElementById(`icon${String(icon)}`);
+  icone.style.color = "#5CBAFF";
+}
 /* SCROLL */
 
 const scrollSmoth = (idLugar) => {
