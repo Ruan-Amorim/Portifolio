@@ -5,8 +5,8 @@ const database = [{
         "azul_claro": '5bacff',
     },
     'imagens': {
-        "personagem": "./images/personagem.jpg",
-        "personagem2": "./images/personagem-pixel-art.png",
+        "personagem": "../images/personagem.jpg",
+        "personagem2": "../images/personagem-pixel-art.png",
         "eu_ghibli": "url",
         "minecraft": "url",
         "greninja": "url"
@@ -21,6 +21,7 @@ const database = [{
         'hora': "20h",
         'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Hardware-20-Horas-Certificado-Curso-em-Video-1.jpg",
         'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+        "pdf": "../pdf/Ruan-Amorim-De-Mendonca-Hardware-20-Horas-Certificado-Curso-em-Video.pdf",
       },
       {
         'empresa': "Curso em Vídeo",
@@ -28,6 +29,7 @@ const database = [{
         'hora': "20h",
         'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Bases-Numericas-20-Horas-Certificado-Curso-em-Video-1.jpg",
         'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+        "pdf": "../pdf/Ruan-Amorim-De-Mendonca-Bases-Numericas-20-Horas-Certificado-Curso-em-Video.pdf",
       },
       {
         'empresa': "Curso em Vídeo",
@@ -35,6 +37,7 @@ const database = [{
         'hora': "40h",
         'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Algoritmos-e-Logica-de-Programacao-40-Horas-Certificado-Curso-em-Video-1.jpg",
         'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+        "pdf": "../pdf/Ruan-Amorim-De-Mendonca-Algoritmos-e-Logica-de-Programacao-40-Horas-Certificado-Curso-em-Video.pdf",
       },
       {
         'empresa': "Curso em Vídeo",
@@ -42,6 +45,7 @@ const database = [{
         'hora': "40h",
         'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Javascript-40-Horas-Certificado-Curso-em-Video-1.jpg",
         'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+        "pdf": "../pdf/Ruan-Amorim-De-Mendonca-Javascript-40-Horas-Certificado-Curso-em-Video.pdf",
       },
       {
         'empresa': "Curso em Vídeo",
@@ -49,6 +53,7 @@ const database = [{
         'hora': "40h",
         'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-WordPress-Modulo-1-8211-Criando-um-site-do-zero-40-Horas-Certificado-Curso-e-1.jpg",
         'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+        "pdf": "../pdf/Ruan-Amorim-De-Mendonca-WordPress-Modulo-1-8211-Criando-um-site-do-zero-40-Horas-Certificado-Curso-em-Video.pdf",
       },
       {
         'empresa': "Curso em Vídeo",
@@ -56,6 +61,39 @@ const database = [{
         'hora': "40h",
         'imagem_pdf': "./images/Ruan-Amorim-De-Mendonca-Curso-HTML5-e-CSS3-modulo-3-de-5-40-HORAS-Certificado-Curso-em-Video-1.jpg",
         'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWA7znkFQhQHjz5rdJD0pfSzEnmYdezaqxQ&s",
+        "pdf": "../pdf/Ruan-Amorim-De-Mendonca-Curso-HTML5-e-CSS3-modulo-3-de-5-40-HORAS-Certificado-Curso-em-Video.pdf",
+      },
+      {
+        'empresa': "Fundação Bradesco",
+        'nome': "Python Básico",
+        'hora': "18h",
+        'imagem_pdf': "./images/Python básico-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cDGahqJYzDNfOU3dvHnyc31cGgzqdJX32o_eOKma1A&s",
+        "pdf": "../pdf/Python básico.pdf",
+      },
+      {
+        'empresa': "Fundação Bradesco",
+        'nome': "Fundamentos do Design Gráfico",
+        'hora': "06h",
+        'imagem_pdf': "./images/Fundamentos do design gráfico-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cDGahqJYzDNfOU3dvHnyc31cGgzqdJX32o_eOKma1A&s",
+        "pdf": "../pdf/Fundamentos do design gráfico.pdf",
+      },
+      {
+        'empresa': "Fundação Bradesco",
+        'nome': "Desenvolvimento orientado a objetos",
+        'hora': "10h",
+        'imagem_pdf': "./images/Desenvolvimento orientado a objetos utilizando a linguagem python-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cDGahqJYzDNfOU3dvHnyc31cGgzqdJX32o_eOKma1A&s",
+        "pdf": "../pdf/Desenvolvimento orientado a objetos utilizando a linguagem python.pdf",
+      },
+      {
+        'empresa': "Fundação Bradesco",
+        'nome': "Python e estrutura de dados",
+        'hora': "10h",
+        'imagem_pdf': "./images/Desenvolvendo um projeto compleyo python com estruturas de dados-1.jpg",
+        'logo': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cDGahqJYzDNfOU3dvHnyc31cGgzqdJX32o_eOKma1A&s",
+        "pdf": "../pdf/Desenvolvendo um projeto compleyo python com estruturas de dados.pdf",
       },
     ],
 }];
@@ -68,18 +106,75 @@ const personaHover = () => {
 
   circle_persona.addEventListener("mouseenter", () => {
   
-    personagem.style.backgroundImage = `url(.${database[0].imagens.personagem2})`;
+    personagem.style.backgroundImage = `url(${database[0].imagens.personagem2})`;
     mensagem.style.opacity = 1;
   })
   circle_persona.addEventListener("mouseleave", () => {
   
-    personagem.style.backgroundImage = `url(.${database[0].imagens.personagem})`;
+    personagem.style.backgroundImage = `url(${database[0].imagens.personagem})`;
     mensagem.style.opacity = 0;
   })
 }
 
+const arrowHover = () => {
+  let arrowIconLeft = document.getElementById("arrowIconLeft");
+  let backIconLeft = document.getElementById("arrow_left");
+  
+  let arrowIconRight = document.getElementById("arrowIconRight");
+  let backIconRight = document.getElementById("arrow_right");
 
-/* ANIMAÇÃO DAS LETRAS NA HOME  mkjkjk*/
+  arrowIconLeft.addEventListener("mouseenter", () => {
+    arrowIconLeft.style.color = "black";
+    backIconLeft.style.background = "transparent";
+    backIconLeft.style.border = "solid 1px #5BACFF";
+  });
+  arrowIconLeft.addEventListener("mouseleave", () => {
+    arrowIconLeft.style.color = "whitesmoke";
+    backIconLeft.style.background = "linear-gradient(to left, #5BACFF, #5697DA)";
+    backIconLeft.style.border = "none";
+  });
+
+  arrowIconRight.addEventListener("mouseenter", () => {
+    arrowIconRight.style.color = "black";
+    backIconRight.style.background = "transparent";
+    backIconRight.style.border = "solid 1px #5BACFF";
+  });
+  arrowIconRight.addEventListener("mouseleave", () => {
+    arrowIconRight.style.color = "whitesmoke";
+    backIconRight.style.background = "linear-gradient(to left, #5BACFF, #5697DA)";
+    backIconRight.style.border = "none";
+  });
+}
+const arrowScroll = (direcao) => {
+  const container = document.getElementById("container_lista_certificados");
+
+  const inicio = container.scrollLeft;
+  const distancia = window.innerWidth * 0.70; // tamanho do "page"
+  const fim = direcao === 0 
+    ? inicio + distancia 
+    : inicio - distancia;
+
+  const duracao = 600;
+  let start = null;
+
+  function animar(tempo) {
+    if (!start) start = tempo;
+
+    const progresso = Math.min((tempo - start) / duracao, 1);
+
+    // mesmo easing que você já usa
+    const ease = 1 - Math.pow(1 - progresso, 3);
+
+    container.scrollLeft = inicio + (fim - inicio) * ease;
+
+    if (progresso < 1) {
+      requestAnimationFrame(animar);
+    }
+  }
+
+  requestAnimationFrame(animar);
+};
+/* ANIMAÇÃO DAS LETRAS NA HOME */
 window.onload = () => {
   const elemento = document.getElementById("texto01home");
   
@@ -105,10 +200,10 @@ window.onload = () => {
 /* ELEMENTO VISIVEL */
 window.addEventListener("scroll", () => {
   const vetorAtual = window.scrollY;
-  const alturaTela = screen.height * 0.80;
+  const alturaTela = visualViewport.height;
   const navbar = document.getElementById("navbar");
 
-  if (vetorAtual < alturaTela * 0.80) {
+  if (vetorAtual < alturaTela) {
     iconUpdate(1);
     navbar.style.width = "45%";
     navbar.style.left = "50%";
@@ -140,10 +235,10 @@ function iconUpdate(icon) {
   let icone = document.getElementById(`icon${String(icon)}`);
   icone.style.color = "#5CBAFF";
 }
-/* SCROLL */
 
+/* SCROLL */
 const scrollSmoth = (idLugar) => {
-  const lugar = document.getElementById(idLugar)
+  const lugar = document.getElementById(idLugar);
 
   const inicio = window.scrollY;
   const fim = lugar.offsetTop;
@@ -202,12 +297,37 @@ function damage(persona) {
 var counterTypePast = 0;
 const typePast = ["pasta", "green_pasta", "orange_pasta"];
 
-const loadingCertificado = () => {
+function showCertificado() {
+  const listSize = database[0].certificados.length;
+
+    if (listSize / 6 <= 1) {
+      loadingCertificado(0,listSize);
+    } else if (listSize / 6 <= 2) {
+      loadingCertificado(0,listSize);
+      loadingCertificado(6,listSize);
+    } else if (listSize / 6 <= 3) {
+      loadingCertificado(0,listSize);
+      loadingCertificado(6,listSize);
+      loadingCertificado(13,listSize);
+    } else {
+      loadingCertificado(0,listSize);
+      loadingCertificado(6,listSize);
+      loadingCertificado(12,listSize);
+      loadingCertificado(17,listSize);
+    }
+
+}
+
+const loadingCertificado = (min, max) => {
   let container_lista_certificados = document.getElementById("container_lista_certificados");
   let div = document.createElement("div");
 
+  div.style.display = "grid";
+  div.style.gridTemplateColumns = "repeat(3, 1fr)";
+  div.style.gridTemplateRows = "repeat(2, auto)";
+  div.style.gap = "20px";
 
-  for (let x = 0; x < database[0].certificados.length; x++) {
+  for (let x = min; x < Math.min(min + 6, max); x++) {
     let pasta = document.createElement("div");
     let pasta_parte_one = document.createElement("div");
     let pasta_parte_two = document.createElement("div");
@@ -222,6 +342,10 @@ const loadingCertificado = () => {
     let carga_horaria = document.createElement("p");
 
     let botao_certificado = document.createElement("div");
+    botao_certificado.id = `code${x}`;
+    botao_certificado.addEventListener("click", () => {
+      window.open(`${database[0].certificados[x].pdf}`, "_blank")
+    });
     
     pasta.className = `pasta ${CounterTypePast(database[0].certificados[x].empresa)}`;
     pasta_parte_one.className = "pasta_parte_one";
@@ -259,7 +383,7 @@ const CounterTypePast = (empresa) => {
   if (empresa == "Curso em Vídeo") {
     counterTypePast = counterTypePast + 1;
     return typePast[0];
-  } else if (empresa == "Fundação Padrescp") {
+  } else if (empresa == "Fundação Bradesco") {
     counterTypePast = counterTypePast + 1;
     return typePast[2];
   } else {
@@ -269,4 +393,5 @@ const CounterTypePast = (empresa) => {
 }
 
 personaHover();
-loadingCertificado();
+arrowHover();
+showCertificado();
