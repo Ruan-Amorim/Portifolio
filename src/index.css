@@ -699,3 +699,36 @@ ul, li {
     width: 100%;
     bottom: 5%;
 }
+/* SKILLS */
+#container_skill {
+    display: block;
+}
+#skill_box_one {
+    width: 100%;
+    height: 50%;
+}
+#skill_box_two {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: orangered;
+}
+#container_skill_cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+.card_skill {
+    position: relative;
+    display: block;
+    width: 36vmin;
+    height: 46vmin;
+    margin: auto;
+    background-image: url("../images/Skills/backCard.png");
+    background-position: center;
+    background-size: cover;
+}

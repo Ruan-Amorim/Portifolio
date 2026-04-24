@@ -203,23 +203,42 @@ window.addEventListener("scroll", () => {
   const vetorAtual = window.scrollY;
   const alturaTela = visualViewport.height;
   const navbar = document.getElementById("navbar");
+  const ul = document.getElementById("list_ul");
 
   if (vetorAtual < alturaTela) {
     iconUpdate(1);
+    ul.style.flexDirection = "unset";
     navbar.style.width = "45%";
+    navbar.style.height = "3vh";
     navbar.style.left = "50%";
+    navbar.style.top = "3%",
     navbar.style.transform = "translate(-50%)";
     navbar.style.backgroundColor = "rgba(236, 236, 236, 0.19)";
+  } else if (vetorAtual >= alturaTela * 3) {
+    iconUpdate(5);
+    ul.style.flexDirection = "column";
+    navbar.style.width = "3vw";
+    navbar.style.height = "60vh";
+    navbar.style.left = "1%";
+    navbar.style.top = "50%",
+    navbar.style.transform = "translate(0,-50%)";
+    navbar.style.backgroundColor = "whitesmoke";
   } else if (vetorAtual >= alturaTela * 2) {
     iconUpdate(3);
+    ul.style.flexDirection = "unset";
     navbar.style.width = "28%";
+    navbar.style.height = "3vh";
     navbar.style.left = "1%";
+    navbar.style.top = "3%",
     navbar.style.transform = "translate(0)";
     navbar.style.backgroundColor = "whitesmoke";
   } else if (vetorAtual >= alturaTela) {
     iconUpdate(2);
+    ul.style.flexDirection = "unset";
     navbar.style.width = "45%";
+    navbar.style.height = "3vh";
     navbar.style.left = "50%";
+    navbar.style.top = "3%",
     navbar.style.transform = "translate(-50%)";
     navbar.style.backgroundColor = "rgba(236, 236, 236, 0.19)";
   } else {
