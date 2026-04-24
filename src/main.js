@@ -147,9 +147,10 @@ const arrowHover = () => {
 }
 const arrowScroll = (direcao) => {
   const container = document.getElementById("container_lista_certificados");
+  let dive = document.getElementById("dive");
 
   const inicio = container.scrollLeft;
-  const distancia = window.innerWidth * 0.70; // tamanho do "page"
+  const distancia = dive.offsetWidth; // tamanho do "page"
   const fim = direcao === 0 
     ? inicio + distancia 
     : inicio - distancia;
@@ -321,11 +322,11 @@ function showCertificado() {
 const loadingCertificado = (min, max) => {
   let container_lista_certificados = document.getElementById("container_lista_certificados");
   let div = document.createElement("div");
-
+  div.id = "dive"
   div.style.display = "grid";
   div.style.gridTemplateColumns = "repeat(3, 1fr)";
   div.style.gridTemplateRows = "repeat(2, auto)";
-  div.style.gap = "20px";
+  div.style.gap = "auto";
 
   for (let x = min; x < Math.min(min + 6, max); x++) {
     let pasta = document.createElement("div");

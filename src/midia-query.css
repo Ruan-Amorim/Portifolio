@@ -26,19 +26,105 @@
     #container_titulo {
         transform: translateY(-10%);
     }
+    #texto02home {
+        font-size: 4vmin;
+        margin-left: 4vw;
+    }
+    #texto01home {
+        margin-left: 4vw;
+    }
+    .titulo {
+        margin-left: 4vw;
+    }
     #home_box_two {
         width: 100%;
         height: 30%;
         transform: translateY(15%);
     }
     #botao_home {
-        width: 40vw;
-        top: 90%;
+        width: 50vw;
+        top: 95%;
         padding: 2%;
         margin-top: 10%;
+        font-size: 6vmin;
     }
     .circle_home {
-        width: 30vw;
-        height: 30vw;
+        width: 45vw;
+        height: 45vw;
+    }
+    
+    /* ABOUT */
+    #container-about {
+        display: block;
+    }
+    #about-box-one{
+        width: 100%;
+        height: 50%;
+    }
+    #about-box-one > div > p {
+    font-size: 4vmin;
+}
+    #about-box-two {
+        width: 80%;
+        height: 35%;
+        margin-top: 10%;
+        float: right;
+    }
+    .circle_about {
+        width: 45vmin;
+        height: 45vmin;
+    }
+    #image_about {
+        width: 46vmin;
+        height: 46vmin;
+    }
+
+    
+    /* Certificados */
+    
+    #container_certificacao {
+        display: block;
+    }
+    #certificacao_box_one {
+        width: 100vw;
+        height: 30%;
+        border-radius: 0 0 3% 3% ;
+        box-shadow: 2px 0 5px #0000004f ;
+    }
+    #certificacao_box_one > div > img {
+        width: 30%;
+        display: block;
+        margin: 5% auto auto auto;
+    }
+    #certificacao_box_one > div {
+        display: block;
+    }
+    #certificacao_box_two {
+        width: 100vw;
+        height: 70%;
+    }
+    #container_lista_certificados {
+        grid-auto-columns: 100vw;
+    }
+    #container_lista_certificados > div {
+        min-width: 100vw;
+        max-width: 100vw;
+        min-height: 100%;
+    }
+    .titulo_curso, .carga_horaria {
+        font-size: 3vmin;
+    }
+    .pasta_parte_one > p {
+        font-size: 2.5vmin;
+        margin: auto auto auto 0;
+        transform: translateY(2%);
+    }
+    .pasta_parte_one > img{
+        height: 85%;
+        margin: 3% auto auto 4.5%;
+        border-radius: 60%;
+    }
+    .botao_certificado {
+        font-size: 2.5vmin;
     }
 }
