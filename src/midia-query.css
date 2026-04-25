@@ -127,6 +127,38 @@
     .botao_certificado {
         font-size: 2.5vmin;
     }
+    /* SKILL*/
+    
+    .titulo_card_skill {
+        top: 40%;
+        transform: translateX(-50%);
+        font-size: 0.6.5em;
+    }
+    .titulo_card_skill2 {
+        top: 48%;
+        transform: translateX(-50%);
+        font-size: 0.10em;
+    }
+    
+    #idiomas {
+        width: 90%;
+        height: 50%;
+    }
+    
+    #eng > h2 {
+        width: 20%;
+        font-size: 1em;
+    }
+
+    #jp > h2 {
+        width: 20%;
+        font-size: 1em;
+    }
+    
+    #progressENG, #progressJP {
+        width: 60%;
+        height: 15%;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 800px) {

@@ -96,6 +96,80 @@ const database = [{
         "pdf": "../pdf/Desenvolvendo um projeto compleyo python com estruturas de dados.pdf",
       },
     ],
+    'skill': [
+      {
+        "logo": "./images/Skills/Javascript.png",
+        "titulo1": "JavaScript",
+        "titulo2": "Logic. Animate. Code.",
+        "code": 80,
+        "work": 90,
+        "network_intelligence": 80,
+      },
+      {
+        "logo": "./images/Skills/Html-css.png",
+        "titulo1": "HTML% e CSS3",
+        "titulo2": "Layout. Structure. Build.",
+        "code": 100,
+        "work": 100,
+        "network_intelligence": 100,
+      },
+      {
+        "logo": "./images/Skills/React.png",
+        "titulo1": "React",
+        "titulo2": "Componentize. render. scale",
+        "code": 50,
+        "work": 40,
+        "network_intelligence": 75,
+      },
+      {
+        "logo": "./images/Skills/WordPress.png",
+        "titulo1": "WordPress",
+        "titulo2": "Create. Customize. Config.",
+        "code": 75,
+        "work": 50,
+        "network_intelligence": 80,
+      },
+      {
+        "logo": "./images/Skills/Python.png",
+        "titulo1": "Python",
+        "titulo2": "Automate. Build. Solve",
+        "code": 40,
+        "work": 30,
+        "network_intelligence": 65,
+      },
+      {
+        "logo": "./images/Skills/SEO.png",
+        "titulo1": "SEO",
+        "titulo2": "Search. Optmize. Analyze.",
+        "code": 98,
+        "work": 85,
+        "network_intelligence": 99,
+      },
+      {
+        "logo": "./images/Skills/Tailwind-css.png",
+        "titulo1": "Tailwind CSS",
+        "titulo2": "Style. Utility. Build.",
+        "code": 60,
+        "work": 40,
+        "network_intelligence": 75,
+      },
+      {
+        "logo": "./images/Skills/Web-design.png",
+        "titulo1": "Web Design",
+        "titulo2": "Experience. Create. Design",
+        "code": 80,
+        "work": 60,
+        "network_intelligence": 80,
+      },
+      {
+        "logo": "./images/Skills/Api.png",
+        "titulo1": "API",
+        "titulo2": "Connect. Process. Fecth.",
+        "code": 85,
+        "work": 75,
+        "network_intelligence": 90,
+      },
+    ]
 }];
 
 /* HOUVER DA IMAGEM NA HOME */
@@ -411,7 +485,121 @@ const CounterTypePast = (empresa) => {
     return typePast[1];
   }
 }
+/* CARREGANDO SKILLS */
+function showCardSkill() {
+  const listSize = database[0].skill.length;
+
+    if (listSize / 3 <= 1) {
+      addCard_skill(0,listSize);
+    } else if (listSize / 3 <= 2) {
+      addCard_skill(0,listSize);
+      addCard_skill(3,listSize);
+    } else if (listSize / 3 <= 3) {
+      addCard_skill(0,listSize);
+      addCard_skill(3,listSize);
+      addCard_skill(6,listSize);
+    } else {
+      addCard_skill(0,listSize);
+      addCard_skill(3,listSize);
+      addCard_skill(6,listSize);
+      addCard_skill(9,listSize);
+    }
+
+}
+
+const addCard_skill = (min, max) => {
+  let skill_box_one = document.getElementById("skill_box_one");
+  let div = document.createElement("div");
+  let card_skill_icone = ["work","code","network_intelligence"];
+
+  
+  div.className = "container_skill_cards";
+
+  for (let x = min; x < Math.min(min + 3, max); x++) {
+    let card_skill = document.createElement("div");
+    let backCard = document.createElement("div");
+    let logo_card_skill = document.createElement("img");
+    let titulo_card_skill = document.createElement("h2");
+    let titulo_card_skill2 = document.createElement("h3");
+    let container_experience_card_skill = document.createElement("div");
+    let ul_card_skill = document.createElement("ul");
+
+    card_skill.className = "card_skill";
+    card_skill.id = `card${database[0].skill[x]}`;
+    backCard.className = "backCard";
+    logo_card_skill.src = database[0].skill[x].logo;
+    logo_card_skill.className = `logo_card_skill`;
+    titulo_card_skill.className = "titulo_card_skill";
+    titulo_card_skill.innerText = database[0].skill[x].titulo1;
+    titulo_card_skill2.className = "titulo_card_skill2";
+    titulo_card_skill2.innerText = database[0].skill[x].titulo2;
+    container_experience_card_skill.className = "container_experience_card_skill";
+    ul_card_skill.className = "ul_card_skill";
+    if (database[0].skill[x].titulo1 == "Web Design") {
+      logo_card_skill.className = `logo_card_skill logo_skill_we_design`;
+    }
+    for (let y = 0; y < 3; y++) {
+      let li = document.createElement("li");
+      let span = document.createElement("span");
+      let progress = document.createElement("progress");
+
+      span.className ="material-symbols-outlined icon_card_skill";
+      span.innerHTML = card_skill_icone[y];
+      progress.value = database[0].skill[x][card_skill_icone[y]];
+      progress.className = "barra_card_skill";
+      progress.max = 100;
+
+      li.append(span, progress);
+      ul_card_skill.append(li);
+
+      skillObserver.observe(card_skill);
+    }
+
+    container_experience_card_skill.append(ul_card_skill);
+    card_skill.append(backCard, logo_card_skill, titulo_card_skill, titulo_card_skill2, container_experience_card_skill);
+    div.append(card_skill);
+  }
+  skill_box_one.append(div);
+}
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animarBarra(entry.target);
+    }
+  });
+}, {
+  threshold: 0.4
+});
+
+function animarBarra(card) {
+  const progressBars = card.querySelectorAll("progress");
+
+  progressBars.forEach(bar => {
+    const valorFinal = bar.value;
+    bar.value = 0;
+
+    let atual = 0;
+    const step = valorFinal / 40;
+
+    function animate() {
+      atual += step;
+
+      if (atual >= valorFinal) {
+        bar.value = valorFinal;
+        return;
+      }
+
+      bar.value = atual;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+}
+skillObserver.observe(document.getElementById("idiomas"));
 
 personaHover();
 arrowHover();
 showCertificado();
+showCardSkill();

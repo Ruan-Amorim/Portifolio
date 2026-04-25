@@ -5,7 +5,7 @@
     animation: wave 1.5s infinite;
   }
   
-  @keyframes wave {
+@keyframes wave {
     0% {
       transform: translateY(0);
     }
@@ -21,8 +21,8 @@
     100% {
       transform: translateY(0); /* 🔥 fica parado o resto do tempo */
     }
-  }
-  @keyframes damage {
+}
+@keyframes damage {
     0% {
         transform: translate(-43%,-51%) scale(1);
     }
@@ -32,8 +32,8 @@
     100% {
         transform: translate(-43%,-51%) scale(1);
     }
-  }
-  @keyframes hitFlash {
+}
+@keyframes hitFlash {
     0% {
         opacity: 0;
     }
@@ -43,18 +43,16 @@
     100% {
         opacity: 0;
     }
-  }
-  @keyframes flutuar {
-    0% {
-        transform: translateY(0) ;
+}
+@keyframes encher {
+    from {
+        width: 0;
     }
-    50% {
-        transform: translateY(-1.5%) ;
+    to {
+        width: 50%;
     }
-    100% {
-        transform: translateY(0) ;
-    }
-  }
+}
+
 /* FONTES */
 .geo-regular {
     font-family: "Geo", sans-serif;
@@ -96,6 +94,7 @@
     background-repeat: no-repeat;
     border: none;
     box-shadow: none;
+    box-sizing: border-box;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -702,22 +701,25 @@ ul, li {
 /* SKILLS */
 #container_skill {
     display: block;
+    min-height: 100dvh;
+    height: auto;
+    padding: 10px 0;
 }
 #skill_box_one {
-    width: 100%;
+    min-width: 100vw;
     height: 50%;
 }
 #skill_box_two {
     position: relative;
     width: 100%;
-    height: 50%;
-    background: orangered;
+    height: 50dvh;
 }
-#container_skill_cards {
+.container_skill_cards {
     position: relative;
-    width: 100%;
+    display: flex;
+    min-width: 100%;
     height: 100%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     align-content: center;
@@ -731,4 +733,133 @@ ul, li {
     background-image: url("../images/Skills/backCard.png");
     background-position: center;
     background-size: cover;
+}
+.logo_card_skill {
+    position: absolute;
+    width: 50%;
+    top: 7.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.titulo_card_skill {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #5BACFF;
+    font-size: 0.8em;
+}
+.titulo_card_skill2 {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    color: #848484;
+    font-size: 0.55em;
+}
+.container_experience_card_skill {
+    position: absolute;
+    width: 53%;
+    height: 25%;
+    top: 56%;
+    left: 50%;
+    border: solid #539ce6 1.5px;
+    transform: translateX(-50%);
+}
+.ul_card_skill {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+.ul_card_skill > li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 1%;
+}
+.icon_card_skill {
+    font-size: 3vmin !important;
+    color: #539ce6;
+}
+.barra_card_skill {
+    width: 70%;
+    height: 40%;
+    margin: auto;
+    background-color: rgba(245, 245, 245, 0.466);
+    border: solid black 0.5px;
+    border-radius: 50px;
+}
+.barra_card_skill::-webkit-progress-value {
+    background: linear-gradient(to right, #4cd3d3,#53e6e6);
+}
+.logo_skill_we_design {
+    top: 15%;
+}
+.card_skill:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+#idiomas {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #5BACFF, #5697DA, #5491cf);
+    border-radius: 50px 0 0 50px;
+    box-shadow: -2px 0 5px #0000004f ;
+    float: right;
+}
+#eng {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+}
+
+#jp {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+}
+
+#eng > h2 {
+    width: 15%;
+    margin: 5%;
+    font-size: 1.3em;
+    font-family: "Inter";
+    text-align: center;
+    color: whitesmoke;
+}
+
+#jp > h2 {
+    width: 15%;
+    margin: 5%;
+    font-size: 1.3em;
+    font-family: "Inter";
+    text-align: center;
+    color: whitesmoke;
+}
+#progressENG, #progressJP {
+    width: 70%;
+    height: 15%;
+}
+#progressENG::-webkit-progress-bar, #progressJP::-webkit-progress-bar {
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.212);
+    background: whitesmoke;
+}
+#progressENG::-webkit-progress-value, #progressJP::-webkit-progress-value {
+    background: linear-gradient(to left, #5C5BFF, #4b4bd3, #3c3ca8);
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.212);
+    padding: 1px;
 }
