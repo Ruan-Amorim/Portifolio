@@ -701,10 +701,11 @@ ul, li {
     width: 100%;
     bottom: 5%;
 }
+
 /* SKILLS */
 #container_skill {
     display: block;
-    min-height: 100dvh;
+    min-height: 100vh;
     height: auto;
     padding: 10px 0;
 }
@@ -865,4 +866,234 @@ ul, li {
     border-radius: 20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.212);
     padding: 1px;
+}
+
+/* PROJETOS */
+#container_projetos {
+    display: block;
+    min-height: 100vh;
+    height: auto;
+}
+.projeto {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 5% 0;
+}
+
+.projeto_box_one {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+}
+.img_project {
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    top: 50%;
+    left: 60%;
+    transform: translate(-65%,-50%);
+    margin: auto;
+    margin-left: 15%;
+    border-radius: 10px;
+    background-image: url("../images/akaza.jpg");
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.253);
+    background-size: cover;
+    z-index: 10000; 
+}
+.back_img_project {
+    position: absolute;
+    width: 40vw;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%,-50%) scale(1.06);
+    border-radius: 10px;
+    background-image: url("../images/akaza.jpg");
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.253);
+    background-size: cover;
+    opacity: 0.5;
+}
+.projeto_box_two {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.253);
+    border-radius: 10px 0 0 10px;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+}
+.projeto_box_two > h2 {
+    position: relative;
+    display: inline-block;
+    transform: scale(1.1);
+    color: #5C5BFF;
+    z-index: 1;
+}
+.projeto_box_two > h2::after {
+    content: attr(data-text);
+    width: 100%;
+    height: 40%; 
+    padding: 0 5% 0 5%;
+    position: absolute;
+    top: 55%;
+    left: -5%;
+    background-color: #c0c0c0;
+    border-radius: 20px;
+    z-index: -1;
+}
+.projeto_box_two > p {
+    display: inline-block;
+    font-size: 2.5vmin;
+    margin: 5% 10%;
+    text-align: justify;
+}
+.botao_ver_projeto {
+    width: 40%;
+    padding: 3%;
+    background: linear-gradient(to right, #373799, #5C5BFF);
+    border-radius: 50px;
+    font-family: "Geo";
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: whitesmoke;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+}
+.botao_ver_projeto:hover {
+    transform: scale(1.08);
+    background: transparent;
+    color: #5C5BFF;
+    border: solid 1px #373799;
+    transition: all 0.3s ease;
+}
+.project01 {
+    background-image: url("../images/Stylish-anime-small.png");
+}
+.project012 {
+    background-image: url("../images/Stylish-anime-big.png");
+}
+
+.project02 {
+    background-image: url("../images/Podtune-small.png");
+}
+.project022 {
+    background-image: url("../images/Podtune-big.png");
+}
+.project03 {
+    background-image: url("../images/Japan-small.png");
+}
+.project032 {
+    background-image: url("../images/Japan-big.png");
+}
+.project04 {
+    background-image: url("../images/Circle-game.png");
+}
+.project042 {
+    background-image: url("../images/Circle-game.png");
+}
+.project05 {
+    background-image: url("../images/Calculadora-magica.png");
+}
+.project052 {
+    background-image: url("../images/Calculadora-magica.png");
+}
+a {
+    all: unset;
+}
+.style_box_my_project {
+    width: 25%;
+    height: 120%;
+    margin: 5%;
+    background: linear-gradient(to bottom, #373799, #5C5BFF);
+    border-radius: 20px;
+    z-index: -1;
+}
+#box_one_meus_projetos {
+    position: relative;
+    display: flex;
+    width: 60vw;
+    height: 60vh;
+    float: left;
+    justify-content: space-between;
+    align-items: center;
+    
+    z-index: 2;
+}
+#box_one_meus_projetos > img {
+    position: absolute;
+    width: 43%;
+    bottom: 10%;
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+#back_my_project {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-right: 5%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, #5BACFF, #5697DA, #589adb);
+    border-radius: 0 100px 100px 0 !important;
+    box-shadow: 2px 0 5px #0000004f ;
+    border-radius: 0 3% 3% 0;
+}
+#botao_my_project {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 15%;
+    bottom: 10%;
+    left: 0;
+    background: linear-gradient(to right, #373799, #5C5BFF);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.322);
+    border-radius: 0 50px 50px 0;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+    z-index: 4;
+}
+#botao_my_project:hover {
+    width: 55%;
+}
+#botao_my_project > p {
+    display: inline-block;
+    margin: auto;
+    font-size: 3vmin;
+    font-family: "Geologica";
+}
+#box_one_meus_projetos > h2 {
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    transform: scale(1.4);
+    color: #5C5BFF;
+    z-index: 1;
+}
+#box_one_meus_projetos > h2::after {
+    content: attr(data-text);
+    width: 100%;
+    height: 40%; 
+    padding: 0 5% 0 5%;
+    position: absolute;
+    top: 55%;
+    left: -5%;
+    background-color: #c0c0c0;
+    border-radius: 20px;
+    z-index: -1;
 }
